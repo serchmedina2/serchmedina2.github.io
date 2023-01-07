@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<!--Página desarrollada por Sergio Javier Medina Cruz 
+    Evelyn Vazquez Hernandez y Mariela Castillo como parte
+    de los requisitos para la liberacion de su servicio social -->
+
+		<!-- This page uses diferent libreries and API's in order to work
+    and provide a great UX experience
+    If you don't know them is highly recommendable that you 
+    previously check the documentation of the following technologies:
+    
+    =>Fonts and Icons 
+        => Google FontS
+        => Font Awesome Icons
+
+    => API's and Frameworks 
+        => Bootstrap Frontend library
+        => Leaflet
+        => Grid and Flexbox CSS 
+    
+    => Animations
+        => Animate CSS
+        => shake CSS
+    -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LECVT Laboratorio de Ecología y Conservados Terrestres | LECVT - IE</title>
+
+		<!--Google Fonts-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,800;1,200;1,300;1,500;1,800&display=swap"
+			type="text/css"
+			rel="stylesheet" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap"
+			type="text/css"
+			rel="stylesheet" />
+
+		<!--Font Awesome-->
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+			integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM"
+			crossorigin="anonymous" />
+
+		<!--Bootstrap 5-->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+
+		<!--Animations-->
+		<!--Animate CSS-->
+		<link rel="stylesheet" href="statics/styles/animate.css" />
+		<!--shake CSS-->
+		<link rel="stylesheet" href="statics/styles/csshake.min.css" />
+
+		<!--Personalized Styles-->
+		<link rel="stylesheet" type="text/css" href="statics/styles/menu-navegacion.css" />
+		<link rel="stylesheet" type="text/css" href="statics/styles/pagina-principal.css" />
+		<link rel="stylesheet" type="text/css" href="statics/styles/estilos-pie-de-pagina.css" />
+		<link rel="stylesheet" type="text/css" href="statics/styles/estilos-tipografia.css" />
+
+		<!--Scripts-->
+		<!--Font Awesome-->
+		<script type="text/javascript" src="https://kit.fontawesome.com/92886b6a4f.js" crossorigin="anonymous"></script>
+		<!--Bootstrap 5-->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+	</head>
+	<body>
+		<header class="main-header">
+			<div class="mobile-header">
+				<div class="social-media">
+					<div>
+						<p class="nav-font">Redes sociales:</p>
+					</div>
+					<a href="https://www.facebook.com/LECVTunam"><i class="fa-brands fa-facebook"></i></a>
+					<a href="https://www.facebook.com/CacomixtleEcolog%C3%ADa-100276905068563/"
+						><i class="fa-brands fa-facebook"></i
+					></a>
+					<a href=""><i class="fa-brands fa-twitter"></i></a>
+				</div>
+				<!--Togle menu button-->
+				<div id="toggle-btn" tabindex="0"></div>
+			</div>
+			<!--Logo-->
+			<div class="logo-LECVT">
+				<a href="index.html"><img src="statics/img/logo_LECVT.png" alt="Logo del LECVT" /></a>
+			</div>
+			<!--Navbar-->
+			<nav>
+				<ul class="nav-menu">
+					<li class="home">
+						<i class="fa-solid fa-house" aria-hidden="true"></i><a href="index.html">Página Principal</a>
+					</li>
+					<li class="activo">
+						<i class="fa fa-users" aria-hidden="true"></i><a href="templates/quienes-somos.html">¿Quiénes somos?</a>
+						<div class="sub-menu">
+							<ul>
+								<li>
+									<a href="templates/biographies/doctor-rodrigo/rodrigo-antonio-medellin-legorreta.html"
+										>Doctor Rodrigo</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/biographies/academicos.html">Académicos</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/biographies/estudiantes-post-doctorales.html">Estudiantes de posgrado</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/biographies/estudiantes-licenciatura.html">Estudiantes de Licenciatura</a><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/biographies/voluntarios.html">Voluntarios</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/biographies/colaboradores.html">Colaboradores</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li><a href="templates/biographies/postdoctorados.html">Posdoctorados</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+								<li><a href="templates/biographies/asociados.html">Asociados</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+								<li>
+									<a href="templates/biographies/servicio-social.html">Servicio Social y otros</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li><a href="templates/biographies/egresados.html">Egresados</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+							</ul>
+						</div>
+					</li>
+					<li><i class="fa-solid fa-diagram-project"></i><a href="templates/proyectos.html">Proyectos</a></li>
+					<li>
+						<i class="fa-solid fa-newspaper"></i><a href="templates/publicaciones.html">Publicaciones</a>
+						<div class="sub-menu">
+							<ul>
+								<li>
+									<a href="templates/publicaciones-section/revistas-indizadas.html"
+										>Artículos en revistas indizadas en el ISI</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/publicaciones-section/revistas-no-indizadas.html"
+										>Artículos en revistas arbitradas no indizadas</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/publicaciones-section/libros-extranjeros.html"
+										>Libros y capítulos de libros extranjeros</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/publicaciones-section/libros-nacionales.html"
+										>Libros y capítulos de libros nacionales</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/publicaciones-section/libros-revistas.html"
+										>Ensayos y revisión de libros en revistas arbitradas</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/publicaciones-section/articulos-divulgacion.html"
+										>Artículos de divulgación</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/publicaciones-section/informes-tecnicos-asesorias.html"
+										>Informes técnicos y asesorías</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/publicaciones-section/otros-trabajos.html">Otros trabajos</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa-solid fa-video"></i><a href="templates/multimedia.html">Multimedia</a>
+						<div class="sub-menu">
+							<ul>
+								<li>
+									<a href="templates/multimedia-section/galeria.html">Galería</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/multimedia-section/videos.html">Videos</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/multimedia-section/infografias.html">Infografías</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/multimedia-section/entrevistas.html">Entrevistas</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa-solid fa-person-walking"></i><a href="templates/actividades-de-vinculacion.html">Actividades</a>
+						<div class="sub-menu">
+							<ul>
+								<li><a href="templates/actividades-academicas.html">Actividades Académicas</a><i class="fa fa-arrow-right" aria-hidden="true"></i></li>
+								<li>
+									<a href="templates/actividades-de-vinculacion.html">Actividades de Vinculación</a><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<i class="fa-solid fa-chalkboard-user"></i><a href="templates/cursos-nacionales.html">Cursos</a>
+						<div class="sub-menu">
+							<ul>
+								<li>
+									<a href="templates/cursos-nacionales.html">Nacionales</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+								<li>
+									<a href="templates/cursos-internacionales.html">Internacionales</a
+									><i class="fa fa-arrow-right" aria-hidden="true"></i>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li><i class="fa-solid fa-tree-city"></i><a href="templates/pagina-de-en-construccion.html">Ciencia Ciudadana</a></li>
+					<li>
+						<i class="fa-solid fa-paw"></i><a href="http://blogs.ciencia.unam.mx/lahuella/">La huella del jaguar</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Quienes somos -->
+		<div class="container d-flex justify-content-center">
+			<p class="presentation-title">El Laboratorio de Ecología y Conservación de Vertebrados Terrestres, se presenta:</p>
+		</div>
+		<section id="presentation-grid">
+			<div class="animate__animated animate__fadeInLeft animate__delay-1s">
+				<div class="title">¿Quienes somos?</div>
+				<div class="presentation-content" tabindex="0">
+					<p>
+						En el Laboratorio de Ecología y Conservación de Vertebrados Terrestres trabajamos con especies y
+						ecosistemas increíbles, pero sin duda el recurso más importante que tenemos es cada una de las
+						personas que lo integran, aportando cosas únicas y valiosas a nuestra labor. Como miembros del
+						laboratorio, nos esforzamos continuamente para generar un cambio en la sociedad y generar
+						información sobre el mundo que nos rodea, seamos de bota, de bata o de corbata. Te invitamos a
+						conocernos, lo que hacemos, nuestros intereses y, si lo deseas, ponerte en contacto.
+					</p>
+				</div>
+			</div>
+			<div class="animate__animated animate__fadeInRight animate__delay-2s">
+				<div class="title">Historia</div>
+				<div class="presentation-content" tabindex="0">
+					<p>
+						El laboratorio surgió como una necesidad de atender a las problemáticas en materia de
+						conservación e investigación ecológica. Desde que se fundó el Instituto de Ecología en 1996, el
+						laboratorio ha estado activo trabajando para la generación de información y toma de decisiones
+						en el país. A cargo del Dr. Rodrigo A. Medellín quien lidera este equipo multidisciplinario hacia una
+						visión vanguardista para resolver los conflictos entre el hombre-naturaleza.
+					</p>
+				</div>
+			</div>
+			<div class="animate__animated animate__fadeInLeft animate__delay-3s">
+				<div class="title">Visión</div>
+				<div class="presentation-content" tabindex="0">
+					<p>
+						Ofrecer y generar información e investigación científica de calidad para contribuir al conocimiento
+						de la biología y ser el puente entre la sociedad y la naturaleza. De forma interdisciplinaria para
+						cubrir todos los aspectos en la toma de decisiones que conlleven a un cambio positivo en la
+						sociedad.
+					</p>
+				</div>
+			</div>
+			<div class="animate__animated animate__fadeInRight animate__delay-4s">
+				<div class="title">Misión</div>
+				<div class="presentation-content" tabindex="0">
+					<p>
+						Formar investigadores de calidad que cuenten con las herramientas y conocimientos para mejorar
+						el ambiente en el que se desarrollen. Trabajando en un esfuerzo constante para generar cambios
+						que beneficien tanto a la sociedad como a su entorno biológico.
+					</p>
+				</div>
+			</div>
+		</section>
+		<!-- Seccion de Actividades -->
+		<div class="activity-margins">
+			<!-- cambiar por title -->
+			<p class="subtitle-2">¿A qué se dedica un laboratorio?</p>
+			<p class="main-content">Checa nuestro trabajo ✨🌿</p>
+		</div>
+		<section id="activity-grid">
+			<!-- Contenedor largo -->
+			<div class="banner-container">
+				<div class="banner animate__animated">
+					<div class="title">Investigación</div>
+					<div id="img-investigation">
+						<img src="statics/img/imagenes-pagina-principal/img-investigacion-l.jpg" alt="Investigación" />
+					</div>
+				</div>
+				<div class="banner animate__animated">
+					<div class="title">Divulgación</div>
+					<div id="img-divulgation">
+						<img src="statics/img/imagenes-pagina-principal/img-divulgacion-l.jpg" alt="Divulgación" />
+					</div>
+				</div>
+				<div class="banner animate__animated">
+					<div class="title">Vinculación</div>
+					<div id="img-vinculation">
+						<img src="statics/img/imagenes-pagina-principal/img-vinculacion-l.png" alt="Vinculación"/>
+					</div>
+				</div>
+			</div>
+			<!-- Contenedor Medio -->
+			<div class="banner-container">
+				<div class="banner animate__animated">
+					<div class="title">Investigación</div>
+					<div id="img-investigation">
+						<img src="statics/img/imagenes-pagina-principal/img-investigacion-m.jpg" alt="Investigación">
+					</div>
+				</div>
+				<div class="banner animate__animated">
+					<div class="title">Divulgación</div>
+					<div id="img-divulgation">
+						<img src="statics/img/imagenes-pagina-principal/img-divulgacion-m.jpg" alt="Divulgación">
+					</div>
+				</div>
+				<div class="banner animate__animated">
+					<div class="title">Vinculación</div>
+					<div id="img-vinculation">
+						<img src="statics/img/imagenes-pagina-principal/vinculacion-m.jpg" alt="Vinculación">
+					</div>
+				</div>
+			</div>
+			<!-- Contenedor chico -->
+			<div class="banner-container">
+				<div class="banner animate__animated">
+					<div class="title">Investigación</div>
+					<div id="img-investigation">
+						<img src="statics/img/imagenes-pagina-principal/img-investigacion-p.jpg" alt="Investigación">
+					</div>
+				</div>
+				<div class="banner animate__animated">
+					<div class="title">Divulgación</div>
+					<div id="img-divulgation">
+						<img src="statics/img/imagenes-pagina-principal/img-divulgacion-p.jpg" alt="Divulgación">
+					</div>
+				</div>
+				<div class="banner animate__animated">
+					<div class="title">Vinculación</div>
+					<div id="img-vinculation">
+						<img src="statics/img/imagenes-pagina-principal/img-vinculacion-l.png" alt="Vinculación">
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="activity-margins"></div>
+		<!--Seccion de noticias & calendario-->
+		<section id="news-calendar">
+			<div class="news">
+				<div class="title">¡Checa nuestras novedades!</div>
+				<div class="news-grid">
+					<!--
+						! Impotante: siempre que se quiera agregar una noticia nueva, hay que hacerlo dentro de div 
+						! con clase news-grid de otra forma podría alterar el disenho de la página web.
+					-->
+					<!--
+					! La siguiente estructura se utilizara para ingresar una nueva noticia dentro del grid de noticias
+					! se debe copiar todo lo que este dentro del elemento div que tiene la clase "new-container".
+					! Modificar el contenido segun se requiera. 
+
+					*<div class="new-container">
+					*	<div class="subtitle">Titulo de la Noticia</div>
+					*	<a href="">
+					*		<img class="img-new shake" src="statics/img/300x200.png" alt="" />
+					*	</a>
+					*	<div>Descripción</div>
+					*	<div>
+					*		<p>Contenido de la Descripción</p>
+					*		<p class="main-content-2">Lorem ipsum dolor sit</p>
+					*	</div>
+					*</div>
+					-->
+					<div class="new-container">
+						<div class="subtitle">Desempolvemos el terror de los murciélagos</div>
+						<a href="http://www.data.sedema.cdmx.gob.mx:8081/culturaambiental/index.php/desempolvemos-el-terror-de-los-murcielagos">
+							<img class="img-new shake" src="statics/img/img-noticias/murcielago300.jpg" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Pierde el terror a los murciélagos a traves de estas interesantes entrevistas</p>
+							
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<a href=""><img class="img-new shake" src="statics/img/300x200.png" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<a href=""><img class="img-new shake" src="statics/img/300x200.png" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<a href=""><img class="img-new shake" src="statics/img/300x200.png" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<a href=""><img class="img-new shake" src="statics/img/300x200.png" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<a href=""><img class="img-new shake" src="statics/img/300x200.png" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<img class="img-new shake shake" src="statics/img/300x200.png" alt="" />
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<a href=""><img class="img-new shake" src="statics/img/300x200.png" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+					<div class="new-container">
+						<div class="subtitle">Titulo Noticia</div>
+						<a href=""><img class="img-new shake" src="statics/img/300x200.png" alt="" /></a>
+						<div>Descripción</div>
+						<div>
+							<p>Contenido de la Descripción</p>
+							<p class="main-content-2">Lorem ipsum dolor sit</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="calendar">
+				<div class="title">Calendario</div>
+				<div class="subtitle">¡Checa nuestra lista de murci-ventos!</div>
+				<div class="calendar-container">
+					<!-- 
+					* Aqui se utiliza una API externa llamada Styled Calendars la cual modifica los estilos de un calendario de Google
+					* La API se tiene que conectar con un calendario existente de google para que funcione y se tienen que pegar, en un 
+					* mismo contenedor, el script y el iframe del calendario. 
+					* El estilo del calendario se enlaza y modifica  desde la pagina web de la API, tambien ofrece estilos mas persona-
+					* lizados si se paga una cuota por el plan premium. 
+					-->
+					<iframe src="https://embed.styledcalendar.com/#s56c324VIQy9kw7EApcA" title="Styled Calendar" class="styled-calendar-container" style="width: 100%; border: none;" data-cy="calendar-embed-iframe"></iframe>
+					<!--Script del calendario-->
+					<script async type="module" src="https://embed.styledcalendar.com/assets/parent-window.js"></script>
+				</div>
+			</div>
+		</section>
+
+		<!--
+		*Carrusel: 
+		*Este es el carrusel de patrocinadores del laboratorio 
+		*A cada pestaña del carrusel se le pueden agregar hasta el
+		*tres elementos, cada elemento contendrá la informacion de 
+		*los patrocinadores, ejemplo: su logo nombre, etcetera.
+		*los elementos son los que tienen la clase "col-sm-12 col-md-6 col-lg-4 d-block mb-4" 
+		-->
+
+		<div class="bg-sponsors">
+			<div class="container mb-3">
+				<div class="subtitle-2">¡Muchas gracias a todos nuestros patrocinadores! 💖🦇</div>
+			</div>
+			<section class="sponsors">
+				<div id="sponsors-carousel" class="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-keyboard="true">
+					<!-- Controls -->
+					<div class="d-flex justify-content-center mb-4">
+						<button
+							class="carousel-control-prev position-relative"
+							type="button"
+							data-bs-target="#sponsors-carousel"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next position-relative"
+							type="button"
+							data-bs-target="#sponsors-carousel"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+	
+					<div class="carousel-inner text-center">
+						<!-- Single item -->
+						<div class="carousel-item active">
+							<div class="container">
+								<div class="row mt-4">
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/Grupo_Mexic_logo.svg" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title">Proyecto Chihuahua</h5>
+												<a href="https://www.gmexico.com/Pages/default.aspx" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/BCI_logo.svg" class=" bg-primary" alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title">Bat Conservation International</h5>
+												<a href="https://www.batcon.org/" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-sm-12 col-md-8 col-lg-4 me-md-auto ms-md-auto d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/GIZ_logo.gif" class="" alt="" />
+											<div class="d-flex flex-column justify-content-end">
+												<h5 class="card-title"> GIZ </h5>
+												<a href="https://www.giz.de/en/worldwide/33041.html" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Single item -->
+						<div class="carousel-item">
+							<div class="container">
+								<div class="row mt-4">
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/Idea_Wild_logo.webp" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title"> Idea Wild </h5>
+												<a href="https://ideawild.org/" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/TIP_logo.jpg" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title"> Tequila Interchange Project </h5>
+												<a href="https://www.batfriendly.org/" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-sm-12 col-md-8 col-lg-4 me-md-auto ms-md-auto d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/AZGFD_logo.png" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title"> Arizona Game and Fish Department </h5>
+												<a href="https://www.azgfd.com/" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Single item -->
+						<div class="carousel-item">
+							<div class="container">
+								<div class="row mt-4">
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly d-flex justify-content-center">
+											<img src="statics/img/logos/NWHC_logo.png" class="bg-success " alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title"> U.S. National Wildlife Health Center (NWHC) </h5>
+												<a href="https://www.usgs.gov/centers/nwhc" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/WMI_logo.png" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title"> Wildlife Managemente Institute (WMI) </h5>
+												<a href="#!" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-sm-12 col-md-8 col-lg-4 me-md-auto ms-md-auto d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/FWS_logo.svg" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end">
+												<h5 class="card-title"> U.S. Fish and Wildlife Service (FWS) </h5>
+												<a href="https://www.fws.gov/" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Single item -->
+						<div class="carousel-item">
+							<div class="container">
+								<div class="row mt-4">
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/FC_logo.png" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end d-flex flex-column justify-content-end">
+												<h5 class="card-title"> Unidad de Análisis Ambiental (UNAAMB, Facultad de Ciencias, UNAM) </h5>
+												<a href="#!" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+	
+									<div class="col-sm-12 col-md-6 col-lg-4 d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/logos/ICP_MS_Instituto_de_Geofisica_logo.png" class=" bg-primary" alt="" />
+											<div class=" d-flex flex-column justify-content-end d-flex flex-column justify-content-end">
+												<h5 class="card-title"> Laboratorio de ICP-MS (Instituto de Geofísica, UNAM) </h5>
+												<a href="#!" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>
+									<!--!Ejemplo de elemento: Aun no utilizado-->
+									<!--
+									! Cuando aun no se haya utilizado un elemento del carrusel 
+									!  hay que comentarlo para que no se muestre en la pagina. 
+									!  Cuando se vaya a ocupar, simplemente se descomenta y se agrega 
+									!  el contenido que vaya a incluir
+									-->
+									<!-- <div class="col-sm-12 col-md-8 col-lg-4 me-md-auto ms-md-auto d-block mb-4">
+										<div class="card h-100 d-flex justify-content-evenly">
+											<img src="statics/img/300x200.png" class="" alt="" />
+											<div class=" d-flex flex-column justify-content-end d-flex flex-column justify-content-end">
+												<h5 class="card-title"> </h5>
+												<a href="#!" class="btn btn-success">¡Checa su página!</a>
+											</div>
+										</div>
+									</div>  -->
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!--Footer de la pagina-->
+		<footer class="footer-font">
+			<div class="footer-grid">
+				<div>
+					<!--Logo del LECVT-->
+					<a href="#"><img src="statics/img/logo_LECVT.png" alt="Logo del LECVT" /></a>
+					<!--Logo del IE-->
+					<a href="https://www.ecologia.unam.mx/web2/"><img src="statics/img/lo_ie.png" alt="Logo del IE" /></a>
+					<!--Creditos y copyrigth-->
+					<div>
+						<div>
+							<p class="footer-title">Créditos:</p>
+							<p>
+								Esta página fue realizada para el LECVT durante la estancia en el servicio social de 3 técnicos en
+								cómputo por los Estudios Técnicos Especializados de la Escuela Nacional Preparatoria de la UNAM
+							</p>
+						</div>
+						<div>
+							<p class="footer-title">&copy; Copyright:</p>
+							<p>&copy; Todos los derechos reservados LECVT - IE 2022</p>
+						</div>
+					</div>
+				</div>
+				<!--Info de contacto, telefono, correo, y ubicacion-->
+				<div>
+					<p class="footer-title">Información de Contacto</p>
+					<div>
+						<ul>
+							<li><i class="fa-solid fa-phone"></i> Teléfono: <a href="tel:"> </a></li>
+							<li>
+								<i class="fa-solid fa-envelopes-bulk"></i> Correo:
+								<a href="mailto:"> </a>
+							</li>
+							<li>
+								<i class="fa-solid fa-map-location-dot"></i> Ubicacion: C.U., Coyoacán, 04510 Ciudad de México,
+								CDMX. Ubicado en Ciudad Universitaria
+							</li>
+						</ul>
+					</div>
+					<div class="pin-icon">
+						<div class="hr"></div>
+						<i class="fa-solid fa-map-pin"></i>
+						<div class="hr"></div>
+					</div>
+					<br />
+					<!--Mapa del LECVT-->
+					<div class="LECVT-map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.096047828551!2d-99.19460705017143!3d19.3216380491636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdffe2ff0e5607%3A0xdbbd4ad7ceb4c578!2sInstituto%20de%20Ecolog%C3%ADa%2C%20UNAM!5e0!3m2!1ses-419!2smx!4v1654713495821!5m2!1ses-419!2smx">
+						</iframe>
+					</div>
+				</div>
+				<!--Redes sociales-->
+				<div>
+					<p class="footer-title">¡Checa nuestras redes sociales! :)</p>
+					<div class="footer-social-media">
+						<div id="facebook-LECVT">
+							<a href="https://www.facebook.com/LECVTunam">
+								<i class="fa-brands fa-facebook"></i> Facebook del LECVT
+							</a>
+						</div>
+						<div id="proyecto-cacomixtle">
+							<a href="https://www.facebook.com/CacomixtleEcolog%C3%ADa-100276905068563/">
+								<i class="fa-brands fa-facebook"></i> Proyecto Cacomixtle
+							</a>
+						</div>
+						<div id="twitter-LECVT">
+							<a href=""> <i class="fa-brands fa-twitter"></i> Twitter del LECVT </a>
+						</div>
+						<div>
+							<a href="https://bioconciencia.org.mx/">
+								<i class="fa-solid fa-earth-americas"></i> Bio Conciencia
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--Scripts-->
+
+		<script type="text/javascript" src="dynamics/toggle-button.js"></script>
+		<script type="text/javascript" src="dynamics/animations-vw-int.js"></script>
+	</body>
+</html>
